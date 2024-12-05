@@ -18,4 +18,7 @@ public class Card {
     String pitanje;
     @Column(nullable = false)
     String odgovor;
+    @ManyToOne
+    @JoinColumn(name = "card_group_id", nullable = false)
+    private CardGroup cardGroup;
 }
