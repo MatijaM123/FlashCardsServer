@@ -12,7 +12,7 @@ public class CardGroupService {
 
     private final CardGroupRepository cardGroupRepository;
 
-    @Autowired
+
     public CardGroupService(CardGroupRepository cardGroupRepository) {
         this.cardGroupRepository = cardGroupRepository;
     }
