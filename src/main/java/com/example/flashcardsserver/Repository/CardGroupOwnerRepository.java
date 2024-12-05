@@ -1,9 +1,9 @@
 package com.example.flashcardsserver.Repository;
 
-import com.example.flashcardsserver.Model.CardGroup;
+
+import com.example.flashcardsserver.Model.CardGroupOwner;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CardGroupRepository extends JpaRepository<CardGroup,Long> {
-}
+public interface CardGroupOwnerRepository extends JpaRepository<CardGroupOwner, Long> {}
