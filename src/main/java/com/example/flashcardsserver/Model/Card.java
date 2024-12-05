@@ -1,22 +1,24 @@
 package com.example.flashcardsserver.Model;
+
+
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@Table(name = "grupaKartice")
-public class CardGroup {
+public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    long Id;
     @Column(nullable = false)
-    private String name;
-
+    String pitanje;
     @Column(nullable = false)
-    private String description;
+    String odgovor;
+    @ManyToOne
+    @JoinColumn(name = "card_group_id", nullable = false)
+    private CardGroup cardGroup;
 }
